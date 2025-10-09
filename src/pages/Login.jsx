@@ -55,7 +55,7 @@ const Login = ({ authError }) => {
         height: '100vh',
         width: '100vw',
         display: 'flex',
-        background: 'linear-gradient(to right bottom, #F0F7FF, #E3F2FD, #D6E8FC)', 
+        background: 'white', 
         overflow: 'hidden',
       }}
     >
