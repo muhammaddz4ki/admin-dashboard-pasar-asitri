@@ -1,8 +1,9 @@
-// File: src/theme.js
+// File: src/adminTheme.js
 
 import { createTheme } from '@mui/material/styles';
 
-export const theme = createTheme({
+// DIUBAH: Nama variabel sekarang adalah "adminTheme"
+export const adminTheme = createTheme({
   palette: {
     primary: {
       main: '#10B981', 

@@ -1,5 +1,3 @@
-// File: src/pages/Login.jsx
-
 import React, { useState } from 'react';
 import { 
   Box, 
@@ -7,20 +5,19 @@ import {
   TextField, 
   Button, 
   Alert,
-  // --- BARU: Impor untuk ikon di dalam text field ---
   InputAdornment,
   IconButton
 } from '@mui/material';
 
-// --- BARU: Impor ikon mata untuk lihat/sembunyikan password ---
+// --- BARU: Impor Link untuk navigasi ---
+import { Link } from 'react-router-dom';
+
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
-// Import aset dari folder Anda
 import LogoIcon from '../assets/logo.png'; 
 import MockupImage from '../assets/mockup.png';
 
-// Impor yang dibutuhkan dari Firebase (hanya untuk email/password)
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebaseConfig.js';
 
@@ -28,14 +25,11 @@ const Login = ({ authError }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState('');
-
-  // --- BARU: State untuk mengontrol visibilitas password ---
   const [showPassword, setShowPassword] = useState(false);
 
-  // --- BARU: Fungsi untuk mengubah state showPassword ---
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const handleMouseDownPassword = (event) => {
-    event.preventDefault(); // Mencegah fokus hilang dari text field
+    event.preventDefault();
   };
 
   const handleEmailLogin = async (e) => {
@@ -70,12 +64,18 @@ const Login = ({ authError }) => {
         }}
       >
         <Box sx={{ width: '100%', maxWidth: '400px' }}>
-          <Box sx={{ mb: 4, display: 'flex', alignItems: 'center' }}>
-            <img src={LogoIcon} alt="Pasar Atsiri Logo" style={{ height: '32px', marginRight: '12px' }} />
-            <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-              Pasar Atsiri
-            </Typography>
-          </Box>
+          
+          {/* --- PERUBAHAN DI BLOK INI --- */}
+          {/* Logo dan Teks sekarang dibungkus dengan Link */}
+          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Box sx={{ mb: 4, display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
+              <img src={LogoIcon} alt="Pasar Atsiri Logo" style={{ height: '32px', marginRight: '12px' }} />
+              <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+                Pasar Atsiri
+              </Typography>
+            </Box>
+          </Link>
+          {/* --- AKHIR PERUBAHAN --- */}
 
           <Typography component="h1" variant="h4" sx={{ fontWeight: 'bold', mb: 1 }}>
             Welcome Back!
@@ -98,14 +98,13 @@ const Login = ({ authError }) => {
               onChange={(e) => setEmail(e.target.value)}
             />
             
-            {/* --- PERUBAHAN DI SINI: TextField Password dimodifikasi --- */}
             <TextField
               margin="normal"
               required
               fullWidth
               name="password"
               label="Password"
-              type={showPassword ? 'text' : 'password'} // Tipe input dinamis
+              type={showPassword ? 'text' : 'password'}
               id="password"
               autoComplete="current-password"
               value={password}
