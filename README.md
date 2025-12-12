@@ -1,14 +1,11 @@
 # Pasar Atsiri - Government Command Center 📊
 
-![Admin Dashboard Banner](https://via.placeholder.com/1200x600?text=Dashboard+Admin+Screenshot+Graphs)
-*(WAJIB: Ganti link gambar di atas dengan screenshot halaman Dashboard yang penuh grafik!)*
-
 > **Pusat kendali dan monitoring data real-time untuk ekosistem rantai pasok minyak atsiri di Garut.**
 
 ---
 
 ### 🌐 Live Dashboard
-Akses panel admin di sini (Gunakan kredensial demo jika ada):
+Akses panel admin di sini:
 ## 🔗 [**Buka Admin Dashboard**](https://pasar-atsiri-app.web.app/)
 
 ---
@@ -16,7 +13,7 @@ Akses panel admin di sini (Gunakan kredensial demo jika ada):
 ## 📂 Ecosystem Repositories
 Dashboard ini adalah sisi "Manajemen" dari ekosistem Pasar Atsiri.
 * **Admin Dashboard (Pemerintah):** [You are here] - *Monitoring harga, verifikasi user, distribusi subsidi.*
-* **Mobile App (Petani & Penyuling):** [Link ke Repo pasaratsiri_app kamu]
+* **Mobile App (Petani & Penyuling):** [https://github.com/muhammaddz4ki/pasaratsiri_app]
 
 ---
 
