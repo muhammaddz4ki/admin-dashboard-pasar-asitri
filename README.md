@@ -49,13 +49,6 @@ Sistem ini mengubah data mentah dari lapangan (input petani/penyuling) menjadi *
 * **Styling:** [Tailwind CSS / Bootstrap / Material UI]
 * **Export Tools:** PDF & Excel Reporting
 
-## 📸 Dashboard Preview
-| Statistical Overview | User Management | Price Control |
-|:---:|:---:|:---:|
-| <img src="link_screenshot_grafik" width="250"> | <img src="link_screenshot_tabel" width="250"> | <img src="link_screenshot_harga" width="250"> |
-
-*(Screenshot adalah kunci. Tampilkan grafik yang berwarna-warni, bukan tabel kosong!)*
-
 ## 🚀 Setup & Installation
 
 1.  **Clone Repository**
